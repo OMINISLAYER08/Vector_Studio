@@ -69,21 +69,6 @@ const Hero = () => {
           </motion.div>
 
           {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="flex justify-center mt-16"
-          >
-            <div className="text-center">
-              <div className="text-2xl md:text-3xl font-display font-bold text-gradient-gold">
-                300+
-              </div>
-              <div className="text-sm text-muted-foreground font-body">
-                Projetos
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
 
