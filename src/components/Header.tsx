@@ -27,11 +27,13 @@ const Header = () => {
           className="flex items-center"
           whileHover={{ scale: 1.05 }}
         >
-          <img 
-            src={logoVector} 
-            alt="Vector Studios - Innovate & Design" 
-            className="h-10 md:h-12 w-auto"
-          />
+          <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-background overflow-hidden flex items-center justify-center border border-gold/30 shadow-gold">
+            <img 
+              src={logoVector} 
+              alt="Vector Studios - Innovate & Design" 
+              className="w-full h-full object-cover"
+            />
+          </div>
         </motion.a>
 
         {/* Desktop Navigation */}
