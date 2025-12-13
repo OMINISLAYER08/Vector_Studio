@@ -3,34 +3,40 @@ import { ExternalLink } from "lucide-react";
 
 const portfolioItems = [
   {
-    title: "Brand Identity",
+    title: "Café Bourbon",
     category: "Logo Design",
-    gradient: "from-gold/20 to-gold-dark/20",
+    description: "Identidade visual para cafeteria premium",
+    image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&h=450&fit=crop",
   },
   {
-    title: "E-commerce Premium",
+    title: "TechFlow Solutions",
     category: "Web Design",
-    gradient: "from-gold-dark/20 to-gold/20",
+    description: "Site institucional moderno",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=450&fit=crop",
   },
   {
-    title: "Coleção Urban",
+    title: "Coleção Urban Style",
     category: "Camisas",
-    gradient: "from-gold/30 to-transparent",
+    description: "Linha de camisetas streetwear",
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=450&fit=crop",
   },
   {
-    title: "Startup Tech",
+    title: "Bella Cucina",
     category: "Logo Design",
-    gradient: "from-transparent to-gold/20",
+    description: "Logotipo para restaurante italiano",
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=450&fit=crop",
   },
   {
-    title: "Landing Page",
+    title: "FitLife Academy",
     category: "Web Design",
-    gradient: "from-gold/20 to-gold-light/20",
+    description: "Plataforma para academia",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=450&fit=crop",
   },
   {
-    title: "Edição Limitada",
+    title: "Rock Festival",
     category: "Camisas",
-    gradient: "from-gold-light/20 to-gold/20",
+    description: "Camisetas para evento musical",
+    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&h=450&fit=crop",
   },
 ];
 
@@ -66,13 +72,15 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer border border-border hover:border-gold/50 transition-all duration-500"
             >
-              {/* Gradient Background */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} bg-secondary`} />
+              {/* Image */}
+              <img 
+                src={item.image} 
+                alt={item.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
               
-              {/* Decorative elements */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                <div className="w-32 h-32 border-2 border-gold rounded-full" />
-              </div>
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-background/40 group-hover:bg-background/60 transition-colors duration-500" />
 
               {/* Content */}
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -82,6 +90,7 @@ const Portfolio = () => {
                 <h3 className="font-display text-xl font-bold text-foreground mt-1">
                   {item.title}
                 </h3>
+                <p className="text-muted-foreground text-sm mt-1">{item.description}</p>
               </div>
 
               {/* Icon */}
