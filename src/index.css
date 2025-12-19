@@ -15,36 +15,36 @@
     --popover: 0 0% 7%;
     --popover-foreground: 45 10% 95%;
 
-    --primary: 43 74% 49%;
+    --primary: 35 65% 45%;
     --primary-foreground: 0 0% 4%;
 
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 45 10% 95%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 15% 90%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 45 5% 60%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 35 10% 55%;
 
-    --accent: 43 74% 49%;
+    --accent: 30 60% 50%;
     --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 43 30% 20%;
-    --input: 0 0% 15%;
-    --ring: 43 74% 49%;
+    --border: 35 25% 18%;
+    --input: 0 0% 12%;
+    --ring: 35 65% 45%;
 
     --radius: 0.75rem;
 
-    /* Custom design tokens */
-    --gold: 43 74% 49%;
-    --gold-light: 43 80% 65%;
-    --gold-dark: 43 70% 35%;
-    --gold-glow: 43 100% 50%;
+    /* Custom design tokens - Bronze/Copper tones matching logo */
+    --gold: 35 65% 45%;
+    --gold-light: 40 70% 60%;
+    --gold-dark: 30 55% 32%;
+    --gold-glow: 35 80% 55%;
     
-    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%), hsl(43 80% 65%), hsl(43 74% 49%));
-    --gradient-gold-dark: linear-gradient(135deg, hsl(43 70% 35%), hsl(43 74% 49%), hsl(43 70% 35%));
-    --gradient-gold-shine: linear-gradient(90deg, transparent, hsl(43 100% 70% / 0.3), transparent);
+    --gradient-gold: linear-gradient(135deg, hsl(30 55% 32%), hsl(35 65% 50%), hsl(40 70% 60%), hsl(35 65% 50%), hsl(30 55% 32%));
+    --gradient-gold-dark: linear-gradient(135deg, hsl(30 50% 28%), hsl(35 60% 42%), hsl(30 50% 28%));
+    --gradient-gold-shine: linear-gradient(90deg, transparent, hsl(40 80% 65% / 0.4), transparent);
     
     --shadow-gold: 0 0 30px hsl(43 74% 49% / 0.3);
     --shadow-gold-lg: 0 0 60px hsl(43 74% 49% / 0.4);
@@ -55,24 +55,24 @@
 
   .dark {
     --background: 0 0% 4%;
-    --foreground: 45 10% 95%;
-    --card: 0 0% 7%;
-    --card-foreground: 45 10% 95%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 45 10% 95%;
-    --primary: 43 74% 49%;
+    --foreground: 40 15% 92%;
+    --card: 0 0% 6%;
+    --card-foreground: 40 15% 92%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 40 15% 92%;
+    --primary: 35 65% 45%;
     --primary-foreground: 0 0% 4%;
-    --secondary: 0 0% 12%;
-    --secondary-foreground: 45 10% 95%;
-    --muted: 0 0% 15%;
-    --muted-foreground: 45 5% 60%;
-    --accent: 43 74% 49%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 40 15% 90%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 35 10% 55%;
+    --accent: 30 60% 50%;
     --accent-foreground: 0 0% 4%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 43 30% 20%;
-    --input: 0 0% 15%;
-    --ring: 43 74% 49%;
+    --border: 35 25% 18%;
+    --input: 0 0% 12%;
+    --ring: 35 65% 45%;
   }
 }
 

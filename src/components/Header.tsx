@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,21 +19,19 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border"
     >
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <motion.a 
           href="#inicio"
-          className="flex items-center gap-3"
+          className="flex items-center gap-2"
           whileHover={{ scale: 1.05 }}
         >
-          <div className="w-12 h-12 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold">
-            <span className="text-primary-foreground font-display font-bold text-xl">V</span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-gradient-gold font-display font-bold text-xl leading-tight">Vector</span>
-            <span className="text-muted-foreground text-xs font-body tracking-widest uppercase">Studio</span>
-          </div>
+          <img 
+            src={logo} 
+            alt="Vector Studio Logo" 
+            className="w-14 h-14 rounded-full object-cover shadow-gold"
+          />
         </motion.a>
 
         {/* Desktop Navigation */}
