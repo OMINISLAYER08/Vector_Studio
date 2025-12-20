@@ -3,40 +3,22 @@ import { ExternalLink } from "lucide-react";
 
 const portfolioItems = [
   {
-    title: "Café Bourbon",
-    category: "Logo Design",
-    description: "Identidade visual para cafeteria premium",
-    image: "https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&h=450&fit=crop",
+    title: "Logotipos",
+    category: "Logotipos",
+    description: "Identidade visual para marcas.",
+    image: "/placeholder.svg",
   },
   {
-    title: "TechFlow Solutions",
-    category: "Web Design",
-    description: "Site institucional moderno",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=450&fit=crop",
+    title: "Sites",
+    category: "Sites",
+    description: "Sites institucionais e plataformas web.",
+    image: "/placeholder.svg",
   },
   {
-    title: "Coleção Urban Style",
+    title: "Camisas",
     category: "Camisas",
-    description: "Linha de camisetas streetwear",
-    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&h=450&fit=crop",
-  },
-  {
-    title: "Bella Cucina",
-    category: "Logo Design",
-    description: "Logotipo para restaurante italiano",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&h=450&fit=crop",
-  },
-  {
-    title: "FitLife Academy",
-    category: "Web Design",
-    description: "Plataforma para academia",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=450&fit=crop",
-  },
-  {
-    title: "Rock Festival",
-    category: "Camisas",
-    description: "Camisetas para evento musical",
-    image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=600&h=450&fit=crop",
+    description: "Estampas e designs para vestuário.",
+    image: "/placeholder.svg",
   },
 ];
 
@@ -72,12 +54,7 @@ const Portfolio = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer border border-border hover:border-gold/50 transition-all duration-500 bg-background"
             >
-              {/* Placeholder instead of image */}
-              <div className="absolute inset-0 bg-muted/20 flex items-center justify-center">
-                <div className="bg-muted w-3/4 h-3/4 rounded flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Imagem</span>
-                </div>
-              </div>
+              <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover" />
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-background/40 group-hover:bg-background/60 transition-colors duration-500" />

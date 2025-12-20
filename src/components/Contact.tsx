@@ -15,7 +15,7 @@ const Contact = () => {
       icon: MessageCircle,
       label: "WhatsApp",
       value: "Envie uma mensagem",
-      href: "https://wa.me/5500000000000",
+      href: "https://wa.me/5519981753659",
       color: "hover:text-green-500",
     },
     {
@@ -85,7 +85,7 @@ const Contact = () => {
               variant="gold"
               size="xl"
               className="group"
-              onClick={() => window.open("https://wa.me/5500000000000", "_blank")}
+              onClick={() => window.open("https://wa.me/5519981753659?text=Quero%20o%20orçamento%20para%20meu%20projeto", "_blank")}
             >
               <Send className="w-5 h-5" />
               Solicitar Orçamento Grátis
