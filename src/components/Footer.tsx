@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Instagram, Heart } from "lucide-react";
+import { Link } from "react-router-dom"; // Import Link
 
 const Footer = () => {
   return (
@@ -31,6 +32,16 @@ const Footer = () => {
           >
             <span>© 2024 Vector Studio. Feito com</span>
             <Heart className="w-4 h-4 text-gold fill-gold" />
+          </motion.div>
+
+          {/* Dev Login Link (subtle) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex items-center gap-2 text-muted-foreground text-sm"
+          >
+            <Link to="/login" className="hover:text-gold transition-colors">Dev Login</Link>
           </motion.div>
 
           {/* Social */}
