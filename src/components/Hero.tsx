@@ -59,11 +59,13 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button variant="gold" size="xl" className="group">
+            <Button variant="gold" size="xl" className="group" onClick={() => window.open("https://wa.me/5519981753659?text=Quero%20o%20orçamento%20para%20meu%20projeto", "_blank")}>
               Solicite seu Orçamento
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Button>
-            <Button variant="goldOutline" size="xl">
+            <Button variant="goldOutline" size="xl" onClick={() => {
+              document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
               Ver Portfólio
             </Button>
           </motion.div>
