@@ -23,6 +23,11 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       include: ['firebase/firestore'],
     },
+    build: {
+      rollupOptions: {
+        external: ['firebase/app', 'firebase/auth', 'firebase/firestore', 'firebase/storage'],
+      },
+    },
   };
   console.log('Vite server config:', config.server); // Added for debugging
   return config;
