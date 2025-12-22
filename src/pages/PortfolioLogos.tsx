@@ -17,7 +17,7 @@ const PortfolioLogos = () => {
           </Link>
           <div className="text-center mb-16">
             <h1 className="font-display text-3xl md:text-5xl font-bold mt-4 mb-6">
-              <span className="text-gradient-gold">Portfólio</span> de Logotipos (Estático)
+              <span className="text-gradient-gold">Portfólio</span> de Logotipos
             </h1>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
               Aqui estão todos os logotipos incríveis que criamos.

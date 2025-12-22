@@ -38,7 +38,7 @@ async function generateManifests() {
       .map(dirent => dirent.name);
 
     for (const imageFile of imageFiles) {
-      const baseName = path.parse(imageFile).name;
+      const baseName = imageFile.replace(/\.[^/.]+$/, "").replace(/\.[^/.]+$/, ""); // Strip all extensions
       const descriptionFilePath = path.join(categoryPath, `${baseName}.txt`);
       const imageUrl = `/portfolio/PORTIFÓLIO STOCKS/${category}/${imageFile}`; // Image URL still points to public folder
       let description = baseName; // Default description
