@@ -67,7 +67,7 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <span className="text-gold text-sm font-medium">{item.category}</span>
+                  <span className="text-foreground text-sm font-medium">{item.category}</span>
                   <h3 className="font-display text-xl font-bold text-foreground mt-1">
                     {item.title}
                   </h3>
