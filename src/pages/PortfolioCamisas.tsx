@@ -81,11 +81,20 @@ const PortfolioCamisas = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {camisas.map((camisa) => (
                   <div key={camisa.id} className="relative bg-card rounded-lg shadow-sm overflow-hidden border border-border flex flex-col">
-                    <img src={camisa.imageUrl} alt={camisa.description} className="w-full h-48 object-cover" />
-                    <div className="p-4 bg-gray-800/50 flex-grow">
-                      <p className="text-muted-foreground text-sm leading-relaxed">{camisa.description}</p>
-                    </div>
-                  </div>
+                                      <img src={camisa.imageUrl} alt={camisa.description} className="w-full h-64 object-contain" />
+                                      <div className="p-6 bg-gray-800/50 flex-grow border-t border-gold flex flex-col justify-center"> {/* Increased padding, added flex for vertical centering */}
+                                        {camisa.description.split('\n\n').map((paragraph, idx) => (
+                                          idx === 0 ? (
+                                            <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed"> {/* Highlight first paragraph as title/slogan */}
+                                              {paragraph}
+                                            </p>
+                                          ) : (
+                                            <p key={idx} className="text-gray-300 text-base leading-relaxed mb-1"> {/* Lighter gray, larger font for body */}
+                                              {paragraph}
+                                            </p>
+                                          )
+                                        ))}
+                                      </div>                  </div>
                 ))}
               </div>
             )}

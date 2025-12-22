@@ -46,7 +46,7 @@
     --gradient-gold-dark: linear-gradient(135deg, hsl(30 50% 28%), hsl(35 60% 42%), hsl(30 50% 28%));
     --gradient-gold-shine: linear-gradient(90deg, transparent, hsl(40 80% 65% / 0.4), transparent);
     
-    --shadow-gold: 0 0 30px hsl(43 74% 49% / 0.3);
+    --shadow-gold: 0 0 40px hsl(43 74% 49% / 0.5);
     --shadow-gold-lg: 0 0 60px hsl(43 74% 49% / 0.4);
     
     --font-display: 'Playfair Display', serif;
