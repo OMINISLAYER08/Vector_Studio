@@ -30,7 +30,7 @@ const PortfolioLogos = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {getLogos().map((logo) => (
                 <div key={logo.id} className="relative bg-card rounded-lg shadow-sm overflow-hidden border border-border flex flex-col">
-                  <img src={logo.imageUrl} alt={logo.description} className="w-full h-48 object-cover" />
+                  <img src={logo.imageUrl} alt={logo.description} className="w-full h-56 object-cover" />
                   <div className="p-4 bg-gray-800/50 flex-grow border-t border-gold"> {/* Description area styled as a box */}
                     <p className="text-muted-foreground text-sm leading-relaxed">{logo.description}</p>
                   </div>
