@@ -80,16 +80,16 @@ const PortfolioCamisas = () => {
             ) : (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {camisas.map((camisa) => (
-                  <div key={camisa.id} className="relative bg-card rounded-lg shadow-sm overflow-hidden border border-border flex flex-col">
+                  <div key={camisa.id} className="relative bg-card rounded-lg shadow-sm shadow-gold-subtle overflow-hidden border border-border flex flex-col">
                                       <img src={camisa.imageUrl} alt={camisa.description} className="w-full h-64 object-contain" />
                                       <div className="p-6 bg-gray-800/50 flex-grow border-t border-gold flex flex-col justify-center"> {/* Increased padding, added flex for vertical centering */}
                                         {camisa.description.split('\n\n').map((paragraph, idx) => (
                                           idx === 0 ? (
-                                            <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed"> {/* Highlight first paragraph as title/slogan */}
+                                            <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed hyphens-none"> {/* Highlight first paragraph as title/slogan */}
                                               {paragraph}
                                             </p>
                                           ) : (
-                                            <p key={idx} className="text-gray-300 text-base leading-relaxed mb-1"> {/* Lighter gray, larger font for body */}
+                                            <p key={idx} className="text-gray-300 text-base leading-relaxed mb-1 hyphens-none"> {/* Lighter gray, larger font for body */}
                                               {paragraph}
                                             </p>
                                           )
