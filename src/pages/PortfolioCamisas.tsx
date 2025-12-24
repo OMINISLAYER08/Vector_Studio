@@ -6,22 +6,45 @@ import { useState, useEffect } from "react";
 import { getCamisas } from "@/lib/portfolioLoader"; // Import getCamisas
 
 const Clock = () => {
-  const [time, setTime] = useState(new Date());
+  const [initialTime] = useState(new Date());
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date());
-    }, 1800); // Update every 1.8 seconds
-    return () => clearInterval(timer);
-  }, []);
+    let animationFrameId: number;
 
-  const seconds = time.getSeconds();
-  const minutes = time.getMinutes();
-  const hours = time.getHours();
+    const updateTime = () => {
+      const now = new Date();
+      const elapsedMs = now.getTime() - initialTime.getTime();
 
-  const secondDeg = seconds * 6;
-  const minuteDeg = minutes * 6 + seconds * 0.1;
-  const hourDeg = (hours % 12) * 30 + minutes * 0.5;
+      // Calculate precise time components
+      const totalSeconds = elapsedMs / 1000;
+      const seconds = totalSeconds % 60;
+      const totalMinutes = totalSeconds / 60;
+      const minutes = totalMinutes % 60;
+      const totalHours = totalMinutes / 60;
+      const hours = (totalHours % 12) + (minutes / 60); // Add fractional hours based on minutes
+
+      const secondDeg = seconds * 6;
+      const minuteDeg = minutes * 6; // Remove the extra seconds component as it's now continuous
+      const hourDeg = hours * 30; // Remove the extra minutes component as it's now continuous
+
+      // Update the DOM directly for the hands
+      const secondHand = document.getElementById('clock-second-hand');
+      const minuteHand = document.getElementById('clock-minute-hand');
+      const hourHand = document.getElementById('clock-hour-hand');
+
+      if (secondHand) secondHand.style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
+      if (minuteHand) minuteHand.style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
+      if (hourHand) hourHand.style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+
+      animationFrameId = requestAnimationFrame(updateTime);
+    };
+
+    animationFrameId = requestAnimationFrame(updateTime);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+    };
+  }, [initialTime]);
 
   return (
     <div className="relative w-16 h-16 rounded-full border-2 border-gold flex items-center justify-center bg-gray-800">
@@ -30,20 +53,20 @@ const Clock = () => {
 
       {/* Hour Hand */}
       <div
+        id="clock-hour-hand"
         className="absolute h-6 w-0.5 bg-gold origin-bottom rounded-t-sm"
-        style={{ transform: `translateX(-50%) rotate(${hourDeg}deg)` }}
       ></div>
 
       {/* Minute Hand */}
       <div
+        id="clock-minute-hand"
         className="absolute h-8 w-0.5 bg-gold origin-bottom rounded-t-sm"
-        style={{ transform: `translateX(-50%) rotate(${minuteDeg}deg)` }}
       ></div>
 
       {/* Second Hand */}
       <div
+        id="clock-second-hand"
         className="absolute h-7 w-0.5 bg-red-500 origin-bottom rounded-t-sm"
-        style={{ transform: `translateX(-50%) rotate(${secondDeg}deg)` }}
       ></div>
     </div>
   );
@@ -85,7 +108,7 @@ const PortfolioCamisas = () => {
                                       <div className="p-4 sm:p-6 bg-gray-800/50 flex-grow border-t border-gold flex flex-col justify-center"> {/* Increased padding, added flex for vertical centering */}
                                         {camisa.description.split('\n\n').map((paragraph, idx) => (
                                           idx === 0 ? (
-                                            <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed hyphens-none"> {/* Highlight first paragraph as title/slogan */}
+                                            <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed hyphens-none text-shadow-gold"> {/* Highlight first paragraph as title/slogan */}
                                               {paragraph}
                                             </p>
                                           ) : (

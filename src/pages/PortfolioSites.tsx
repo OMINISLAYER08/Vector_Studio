@@ -35,7 +35,7 @@ const PortfolioSites = () => {
                   <div className="p-4 sm:p-6 bg-gray-800/50 flex-grow border-t border-gold flex flex-col justify-center"> {/* Increased padding, added flex for vertical centering */}
                     {site.description.split('\n\n').map((paragraph, idx) => (
                       idx === 0 ? (
-                        <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed hyphens-none"> {/* Highlight first paragraph as title/slogan */}
+                        <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed hyphens-none text-shadow-gold"> {/* Highlight first paragraph as title/slogan */}
                           {paragraph}
                         </p>
                       ) : (
