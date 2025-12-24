@@ -68,21 +68,21 @@ const Clock = () => {
       <div
         id="clock-hour-hand"
         className="absolute w-1 h-6 bg-gold origin-bottom rounded-full shadow-sm shadow-gold"
-        style={{ top: '50%', left: '50%' }}
+        style={{ top: '50%', left: '50%', transform: 'translate(-50%, -100%)' }}
       ></div>
 
       {/* Minute Hand */}
       <div
         id="clock-minute-hand"
         className="absolute w-0.5 h-8 bg-gold origin-bottom rounded-full shadow-sm shadow-gold"
-        style={{ top: '50%', left: '50%' }}
+        style={{ top: '50%', left: '50%', transform: 'translate(-50%, -100%)' }}
       ></div>
 
       {/* Second Hand */}
       <div
         id="clock-second-hand"
         className="absolute w-0.5 h-7 bg-gold origin-bottom rounded-full opacity-80"
-        style={{ top: '50%', left: '50%' }}
+        style={{ top: '50%', left: '50%', transform: 'translate(-50%, -100%)' }}
       ></div>
     </div>
   );
