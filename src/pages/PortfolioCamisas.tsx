@@ -47,26 +47,42 @@ const Clock = () => {
   }, [initialTime]);
 
   return (
-    <div className="relative w-16 h-16 rounded-full border-2 border-gold flex items-center justify-center bg-gray-800">
+    <div className="relative w-20 h-20 rounded-full border-4 border-gold flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 shadow-lg shadow-gold/20">
+      {/* Hour markings */}
+      {Array.from({ length: 12 }).map((_, i) => (
+        <div
+          key={i}
+          className="absolute w-0.5 h-2 bg-gold origin-bottom"
+          style={{
+            transform: `translateX(-50%) rotate(${i * 30}deg)`,
+            top: '10%',
+            left: '50%',
+          }}
+        />
+      ))}
+
       {/* Center dot */}
       <div className="absolute w-2 h-2 bg-gold rounded-full z-10"></div>
 
       {/* Hour Hand */}
       <div
         id="clock-hour-hand"
-        className="absolute h-6 w-0.5 bg-gold origin-bottom rounded-t-sm"
+        className="absolute w-1 h-6 bg-gold origin-bottom rounded-full shadow-sm shadow-gold"
+        style={{ top: '50%', left: '50%' }}
       ></div>
 
       {/* Minute Hand */}
       <div
         id="clock-minute-hand"
-        className="absolute h-8 w-0.5 bg-gold origin-bottom rounded-t-sm"
+        className="absolute w-0.5 h-8 bg-gold origin-bottom rounded-full shadow-sm shadow-gold"
+        style={{ top: '50%', left: '50%' }}
       ></div>
 
       {/* Second Hand */}
       <div
         id="clock-second-hand"
-        className="absolute h-7 w-0.5 bg-red-500 origin-bottom rounded-t-sm"
+        className="absolute w-0.5 h-7 bg-gold origin-bottom rounded-full opacity-80"
+        style={{ top: '50%', left: '50%' }}
       ></div>
     </div>
   );
