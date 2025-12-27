@@ -3,5 +3,20 @@
     "id": "D.R.A.C.O",
     "imageUrl": "/portfolio/PORTIFÓLIO STOCKS/LOGOTIPOS/D.R.A.C.O.png.png",
     "description": "D.R.A.C.O. Contabilidades\r\n\r\nGuardiões das suas finanças. Protegemos seu patrimônio com precisão e estratégia, unindo expertise contábil e modernidade.\r\n\r\nConfiança e força para o seu negócio."
+  },
+  {
+    "id": "EcoVolt",
+    "imageUrl": "/logo-ecovolt.png",
+    "description": "EcoVolt Systems\n\nEnergia inteligente para um futuro sustentável. Soluções de alta performance em tecnologia elétrica e automação.\n\nConectando inovação e eficiência."
+  },
+  {
+    "id": "TerraViva",
+    "imageUrl": "/logo-terra-viva.png",
+    "description": "Terra Viva Gastronomia\n\nO sabor autêntico da natureza. Culinária orgânica e artesanal, cultivada com respeito e preparada com paixão.\n\nNutrindo corpo e alma."
+  },
+  {
+    "id": "Aura",
+    "imageUrl": "/logo-aura.png",
+    "description": "Aura Jewelry\n\nDesign que transcende o tempo. Joias minimalistas criadas para exaltar a elegância natural de quem as veste.\n\nLuxo essencial em cada detalhe."
   }
 ]
