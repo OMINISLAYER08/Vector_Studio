@@ -129,7 +129,7 @@ const PortfolioLogos = () => {
                     <VisuallyHidden.Root>
                       <DialogTitle>{logo.description.split("\n\n")[0]}</DialogTitle>
                     </VisuallyHidden.Root>
-                    <div className="relative flex flex-col md:flex-row h-[90vh] md:h-[750px]">
+                    <div className="relative flex flex-col md:flex-row h-[85dvh] md:h-[750px]">
                       {/* Close Button */}
                       <DialogClose className="absolute top-4 right-4 z-50 text-white/50 hover:text-white bg-black/50 rounded-full p-2 transition-colors">
                         <X className="w-6 h-6" />
