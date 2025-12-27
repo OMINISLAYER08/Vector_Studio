@@ -7,7 +7,7 @@ const Hero = () => {
   const stats = [
     { value: "+50", label: "Projetos Entregues" },
     { value: "100%", label: "Satisfação" },
-    { value: "+5", label: "Anos de Experiência" },
+    // Removed "+5 Anos de Experiência"
   ];
 
   return (
@@ -78,7 +78,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 md:gap-12 border-t border-white/10 pt-12">
+          <div className="grid grid-cols-2 gap-8 md:gap-12 border-t border-white/10 pt-12 max-w-2xl mx-auto">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -98,26 +98,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gold/50 rounded-full flex justify-center backdrop-blur-sm bg-background/20"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-3 bg-gold rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div>
     </section>
   );
 };
