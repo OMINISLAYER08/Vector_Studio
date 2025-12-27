@@ -1,12 +1,13 @@
 // src/lib/portfolioLoader.ts
 
-import type { PortfolioItem } from '@/types'; // Assuming you have a types file, or define it here
+
 
 // Define the PortfolioItem type
 export type PortfolioItem = {
   id: string;
   imageUrl: string;
   description: string;
+  projectUrl?: string;
 };
 
 // Dynamically import the manifests. Vite handles this during build.
