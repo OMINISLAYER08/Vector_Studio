@@ -24,17 +24,17 @@ const Clock = () => {
       const hours = (totalHours % 12) + (minutes / 60); // Add fractional hours based on minutes
 
       const secondDeg = seconds * 6;
-      const minuteDeg = minutes * 6; // Remove the extra seconds component as it's now continuous
-      const hourDeg = hours * 30; // Remove the extra minutes component as it's now continuous
+      const minuteDeg = minutes * 6;
+      const hourDeg = hours * 30;
 
       // Update the DOM directly for the hands
       const secondHand = document.getElementById('clock-second-hand');
       const minuteHand = document.getElementById('clock-minute-hand');
       const hourHand = document.getElementById('clock-hour-hand');
 
-      if (secondHand) secondHand.style.transform = `translateX(-50%) rotate(${secondDeg}deg)`;
-      if (minuteHand) minuteHand.style.transform = `translateX(-50%) rotate(${minuteDeg}deg)`;
-      if (hourHand) hourHand.style.transform = `translateX(-50%) rotate(${hourDeg}deg)`;
+      if (secondHand) secondHand.style.transform = `translate(-50%, -100%) rotate(${secondDeg}deg)`;
+      if (minuteHand) minuteHand.style.transform = `translate(-50%, -100%) rotate(${minuteDeg}deg)`;
+      if (hourHand) hourHand.style.transform = `translate(-50%, -100%) rotate(${hourDeg}deg)`;
 
       animationFrameId = requestAnimationFrame(updateTime);
     };
@@ -120,20 +120,20 @@ const PortfolioCamisas = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {camisas.map((camisa) => (
                   <div key={camisa.id} className="relative bg-card rounded-lg shadow-sm shadow-gold-subtle overflow-hidden border border-border flex flex-col">
-                                      <img src={camisa.imageUrl} alt={camisa.description} className="w-full h-64 object-contain" />
-                                      <div className="p-4 sm:p-6 bg-gray-800/50 flex-grow border-t border-gold flex flex-col justify-center"> {/* Increased padding, added flex for vertical centering */}
-                                        {camisa.description.split('\n\n').map((paragraph, idx) => (
-                                          idx === 0 ? (
-                                            <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed hyphens-none text-shadow-gold"> {/* Highlight first paragraph as title/slogan */}
-                                              {paragraph}
-                                            </p>
-                                          ) : (
-                                            <p key={idx} className="text-gray-300 text-base leading-relaxed mb-1 hyphens-none"> {/* Lighter gray, larger font for body */}
-                                              {paragraph}
-                                            </p>
-                                          )
-                                        ))}
-                                      </div>                  </div>
+                    <img src={camisa.imageUrl} alt={camisa.description} className="w-full h-64 object-contain" />
+                    <div className="p-4 sm:p-6 bg-gray-800/50 flex-grow border-t border-gold flex flex-col justify-center"> {/* Increased padding, added flex for vertical centering */}
+                      {camisa.description.split('\n\n').map((paragraph, idx) => (
+                        idx === 0 ? (
+                          <p key={idx} className="text-gold text-lg font-bold mb-2 leading-relaxed hyphens-none text-shadow-gold"> {/* Highlight first paragraph as title/slogan */}
+                            {paragraph}
+                          </p>
+                        ) : (
+                          <p key={idx} className="text-gray-300 text-base leading-relaxed mb-1 hyphens-none"> {/* Lighter gray, larger font for body */}
+                            {paragraph}
+                          </p>
+                        )
+                      ))}
+                    </div>                  </div>
                 ))}
               </div>
             )}
