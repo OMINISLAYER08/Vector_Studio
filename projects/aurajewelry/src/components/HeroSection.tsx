@@ -75,7 +75,7 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Pre-title */}
           <div className="overflow-hidden mb-6">
-            <p className="font-body text-xs md:text-sm tracking-[0.5em] text-gold uppercase animate-fade-up">
+            <p className="font-body text-sm md:text-base tracking-[0.5em] text-gold uppercase animate-fade-up">
               Joalheria Exclusiva
             </p>
           </div>
@@ -124,7 +124,7 @@ const HeroSection = () => {
             Design que transcende o tempo
           </p>
 
-          <p className="font-body text-sm md:text-base text-muted-foreground/70 max-w-xl mx-auto mb-12 leading-loose animate-fade-in opacity-0" style={{ animationDelay: '1200ms', animationFillMode: 'forwards' }}>
+          <p className="font-body text-base md:text-lg text-muted-foreground/70 max-w-xl mx-auto mb-12 leading-loose animate-fade-in opacity-0" style={{ animationDelay: '1200ms', animationFillMode: 'forwards' }}>
             Joias minimalistas criadas para exaltar a elegância natural de quem as veste.
             <br />
             <span className="text-gold/90 font-medium mt-2 block">Luxo essencial em cada detalhe.</span>
