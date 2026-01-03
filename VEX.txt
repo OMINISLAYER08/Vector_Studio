@@ -1,0 +1,77 @@
+CONTEXTO COMPLETO DO PROJETO VECTOR STUDIO & AURA JEWELRY (ARQUIVO VEX)
+Data de Criação: 03/01/2026
+Objetivo: Servir como base de conhecimento ("Bagagem") para futuras iterações e novos projetos.
+
+---
+
+### 1. PERFIL E PREFERÊNCIAS DO CLIENTE (Miguel)
+*   **Estética Visual:** Foco absoluto em *Premium*, *Luxo* e *Minimalismo*.
+    *   **Paleta:** Preto Profundo (Charcoal/Dark), Dourado Metálico (Gold/Gradient) e Marfim (Ivory) para textos.
+    *   **Vibe:** "Cinematográfica", com texturas táteis (noise texture overlay) e iluminação ambiente (glows).
+*   **Interatividade:** O site deve parecer "vivo".
+    *   Uso extensivo de efeitos *Hover*.
+    *   Paralaxe no movimento do mouse (elementos flutuando em camadas).
+    *   Animações de entrada (`fade-up`, `fade-in-blur`) e desenho de traços SVG (`draw-stroke`).
+*   **Branding:**
+    *   **Vector Studio:** Favicon é um Monograma "VS" dourado estilizado sem fundo (transparente).
+    *   **Aura Jewelry:** Favicon é um Diamante Dourado (line art) sem fundo.
+    *   **Restrição Crítica:** NUNCA deixar resquícios de marcas de templates ou ferramentas (ex: "Lovable"). Tudo deve ser personalizado como "Vector Studio".
+
+---
+
+### 2. ARQUITETURA TÉCNICA (O "Core" do Projeto)
+*   **Estrutura:** Monorepo (Um repositório principal contendo múltiplos projetos).
+    *   **Raiz:** Vector Weave Works (Portfólio Principal).
+    *   **Sub-projeto:** `projects/aurajewelry/` (Site da Aura).
+*   **Portfólio Automático:**
+    *   Script: `generatePortfolioManifests.cjs`.
+    *   Funcionamento: Lê pastas em `public/portfolio/PORTIFÓLIO STOCKS/`. Gera JSONs (`manifest.json`) automaticamente.
+    *   Metadados: Arquivos `_metadata.json` nas pastas permitem customizar URLs e descrições sem editar código.
+*   **Git & Deploy:**
+    *   Repositório Único: `REPOSIT-RIO-DE-MIGUEL`.
+    *   *Solução Hard Merge:* Removemos submódulos git aninhados para garantir que o Vercel detectasse as mudanças na pasta `projects/aurajewelry`.
+    *   O código do subprojeto faz parte INTEGRAL do repo principal.
+
+---
+
+### 3. HISTÓRICO DE DESENVOLVIMENTO (Diário de Bordo)
+
+#### FASE 1: Refinamento da Vector (Identidade)
+*   Criação de identidade visual escura e vibrante.
+*   Implementação de micro-interações e efeitos de vidro (glassmorphism).
+
+#### FASE 2: Integração Aura Jewelry (O Desafio Técnico)
+*   **Problema:** O site Aura era um projeto externo. O cliente queria integrá-lo ao portfólio.
+*   **Solução Inicial:** Cópia estática para `public/projects`. (Gerou problemas de build e manutenção).
+*   **Solução Final:** Integração do código fonte em `projects/aurajewelry` e configuração de deploy separado na Vercel apontando para essa subpasta (Root Directory).
+*   **Bug 404:** Links com `.html` explícito quebravam no Vercel. Corrigido para Clean URLs (`/projects/aurajewelry/` ou domínio externo).
+
+#### FASE 3: Overhaul Visual do Aura (Transformação Luxuosa)
+*   Refizemos a `HeroSection.tsx`.
+*   Adicionamos animação de SVG (desenho do diamante) sincronizada.
+*   Implementamos paralaxe matemático seguindo o mouse.
+*   Aumentamos fontes (Tipografia: Playfair Display + Montserrat) para melhorar legibilidade e impacto.
+
+#### FASE 4: Polimento Final e Deploy
+*   **Favicons:** Criação de ativos exclusivos (VS Monogram e Diamond Logo) via geração de imagem por IA, substituindo ícones genéricos.
+*   **Cache Busting:** Renomeação de arquivos (`vector-favicon.png` -> `vs-favicon.png`) para forçar atualização em navegadores com cache agressivo.
+*   **SEO:** Limpeza manual de metatags no `index.html` para remover "Lovable" e inserir "Vector Studio".
+
+---
+
+### 4. INSTRUÇÕES PARA O FUTURO (O "Manual")
+1.  **Novos Projetos no Portfólio:**
+    *   Criar pasta em `public/portfolio/PORTIFÓLIO STOCKS/SITES/`.
+    *   Adicionar imagem de capa + `_metadata.json` com a URL do projeto.
+    *   Rodar `node generatePortfolioManifests.cjs`.
+2.  **Deploy de Sub-projetos:**
+    *   Na Vercel, criar novo projeto importando o MESMO repositório (`REPOSIT-RIO-DE-MIGUEL`).
+    *   Mudar "Root Directory" para a pasta do projeto (ex: `projects/novosite`).
+3.  **Estilo:**
+    *   Sempre priorizar Tailwind com variáveis CSS (`--gold`, `--charcoal`) definidas no `index.css`.
+    *   Manter a consistência das animações (`animate-fade-up`, `animate-draw`).
+
+---
+
+**Resumo da Personalidade da IA (Antigravity) neste projeto:**
+Atua como um "Engenheiro de Frontend Sênior + Designer de UI". Foco em soluções técnicas robustas (scripts, git hooks) mas com extrema sensibilidade estética. Proativo na correção de bugs de deploy.

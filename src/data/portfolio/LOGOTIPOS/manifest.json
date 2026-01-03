@@ -1,12 +1,27 @@
 [
   {
+    "id": "Aura",
+    "imageUrl": "/portfolio/PORTIFÓLIO STOCKS/LOGOTIPOS/Aura.png",
+    "description": "Aura Jewelry. Minimalismo e luxo em cada traço. Uma identidade visual criada para transmitir sofisticação atemporal e elegância natural."
+  },
+  {
     "id": "D.R.A.C.O",
     "imageUrl": "/portfolio/PORTIFÓLIO STOCKS/LOGOTIPOS/D.R.A.C.O.png.png",
     "description": "D.R.A.C.O. Contabilidades\r\n\r\nGuardiões implacáveis das suas finanças. Com precisão afiada e visão estratégica, protegemos o seu patrimônio como um dragão imperial defende seu tesouro. Expertise contábil sólida, soluções modernas e total confidencialidade – tudo envolto em um escudo de confiança inabalável.\r\n\r\nD.R.A.C.O.: onde a contabilidade ganha força e equilíbrio."
   },
   {
+    "id": "EcoVolt",
+    "imageUrl": "/portfolio/PORTIFÓLIO STOCKS/LOGOTIPOS/EcoVolt.png",
+    "description": "EcoVolt Solutions. Energia limpa, tecnologia do futuro. Identidade visual dinâmica que conecta sustentabilidade com inovação tecnológica de ponta."
+  },
+  {
     "id": "logoteste1",
     "imageUrl": "/portfolio/PORTIFÓLIO STOCKS/LOGOTIPOS/logoteste1.png.jpeg",
     "description": "Esta é uma descrição de teste para o logotipo logoteste1."
+  },
+  {
+    "id": "TerraViva",
+    "imageUrl": "/portfolio/PORTIFÓLIO STOCKS/LOGOTIPOS/TerraViva.png",
+    "description": "Terra Viva. A força da natureza em sua forma mais pura. Design orgânico e robusto para representar agricultura sustentável e vitalidade."
   }
 ]
