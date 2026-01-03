@@ -98,7 +98,7 @@ const HeroSection = () => {
                 stroke="currentColor"
                 strokeWidth="1.5"
                 className="animate-draw"
-                style={{ animationDelay: '400ms' }}
+                style={{ animationDelay: '450ms' }}
               />
               <path
                 d="M30 35 L50 45 L70 35"
