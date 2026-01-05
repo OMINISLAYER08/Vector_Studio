@@ -15,7 +15,7 @@ Este guia explica como transformar uma ideia em um site online e integrado ao po
 
 ### FASE 2: INTEGRAÇÃO NO VECTOR (A "Casa") 🏠
 1.  **Prepare a Pasta:**
-    *   Vá até a pasta do projeto Vector: `Meus Documentos > PROJETOS DE SITES > VECTOR SITE > vector-weave-works > projects`.
+    *   Vá até a pasta do projeto Vector: `Meus Documentos > PROJETOS DE SITES > VECTOR SITE > vector-studios > projects`.
     *   Crie uma NOVA pasta com o nome do projeto (sem espaços, ex: `ecovolt` ou `terraviva`).
 2.  **Copie os Arquivos:**
     *   Pegue o conteúdo que você baixou da Lovable (extraia o ZIP).
@@ -40,7 +40,7 @@ Este guia explica como transformar uma ideia em um site online e integrado ao po
 1.  **Gerar Link do Projeto:**
     *   Vá no [Dashboard da Vercel](https://vercel.com/dashboard).
     *   Clique em **Add New... > Project**.
-    *   Importe o repositório **`REPOSIT-RIO-DE-MIGUEL`**.
+    *   Importe o repositório **`vector-studios`**.
     *   **IMPORTANTE:** Em "Root Directory", clique em Edit e selecione a pasta do seu novo site (ex: `projects/ecovolt`).
     *   Clique em **Deploy**. Salve a URL gerada (ex: `ecovolt.vercel.app`).
 
