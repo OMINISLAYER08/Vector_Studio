@@ -29,6 +29,6 @@ Desenvolver o site da "Vector Studio", um portfólio de design que inclui um sis
 
 *   **O que foi feito:** Todo o sistema de login, painel de administração e o CMS para a seção "Logotipos" estão implementados e o código está no GitHub.
 *   **Bloqueio Atual:** O usuário está enfrentando um período de "cooldown" da Vercel após ter deletado sua conta antiga.
-*   **PRÓXIMO PASSO (Ação do Usuário):** O usuário precisa esperar o período de cooldown acabar para poder criar uma nova conta na Vercel usando a opção **"Continue with GitHub"**. Depois disso, ele deve importar o repositório `vector-studios` e fazer o deploy para obter uma URL pública e estável.
+*   **PRÓXIMO PASSO (Ação do Usuário):** O usuário precisa esperar o período de cooldown acabar para poder criar uma nova conta na Vercel usando a opção **"Continue with GitHub"**. Depois disso, ele deve importar o repositório `Vector_Studio` e fazer o deploy para obter uma URL pública e estável.
 
 Com estas notas, a próxima instância do Gemini poderá continuar o trabalho exatamente de onde paramos.

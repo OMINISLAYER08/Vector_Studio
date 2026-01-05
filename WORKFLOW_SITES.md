@@ -40,7 +40,7 @@ Este guia explica como transformar uma ideia em um site online e integrado ao po
 1.  **Gerar Link do Projeto:**
     *   Vá no [Dashboard da Vercel](https://vercel.com/dashboard).
     *   Clique em **Add New... > Project**.
-    *   Importe o repositório **`vector-studios`**.
+    *   Importe o repositório **`Vector_Studio`**.
     *   **IMPORTANTE:** Em "Root Directory", clique em Edit e selecione a pasta do seu novo site (ex: `projects/ecovolt`).
     *   Clique em **Deploy**. Salve a URL gerada (ex: `ecovolt.vercel.app`).
 
